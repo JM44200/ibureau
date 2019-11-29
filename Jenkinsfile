@@ -31,4 +31,4 @@ pipeline {
             }
         }
     }
-}ebureau.war
+}
