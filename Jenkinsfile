@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                // 
-                echo 'Etape Compile'
+                echo 'Etape Helloi, Build Maven'
+                bat 'mvn clean compile'
             }
         }
         stage('Test') { 
