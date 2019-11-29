@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                echo 'Hello, Deploy'
-               bat 'copy C:\opt\Jenkins\workspace\MypipelineEbureau\target\ebureau.war c:\programmes\apache software foundation\tomcat 9.0\webapps\'
+               bat 'copy "C:\\opt\\Jenkins\\workspace\\MypipelineEbureau\\target\\ebureau.war" "c:\\programmes\\apache software foundation\\tomcat 9.0\\webapps\" '
             }
         }
     }
