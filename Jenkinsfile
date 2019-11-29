@@ -8,27 +8,27 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo 'Etape Hello, Build Maven'
+                echo 'Hello, Build Maven'
                 bat 'mvn clean compile'
             }
         }
         stage('Test') { 
             steps {
-                echo 'Etape Hello, Test Maven'
+                echo 'Hello, Test Maven'
                 bat 'mvn clean test'
             }
         }
         stage('Packaging') { 
             steps {
-                echo 'Etape Hello, Panckaging Maven'
+                echo 'Hello, Packaging Maven'
                 bat 'mvn clean package'
             }
         }
         stage('Deploy') { 
             steps {
-                // 
-                echo 'Etape Deploy'
+               echo 'Hello, Deploy'
+               bat 'copy C:\opt\Jenkins\workspace\MypipelineEbureau\target\ebureau.war c:\programmes\tomcatformation\tomcat9.0\webapps\'
             }
         }
     }
-}
+}ebureau.war
