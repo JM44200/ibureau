@@ -16,6 +16,12 @@ pipeline {
             steps {
                 echo 'Hello, Test Maven'
                 bat 'mvn clean test'
+            }  
+        }
+        stage('Sonar') { 
+            steps {
+                echo 'Hello, Test Sonar'
+                bat 'mvn clean test'
             }
         }
         stage('Packaging') { 
@@ -27,7 +33,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                echo 'Hello, Deploy'
-               bat ' copy "target\\ebureau.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps" '
+               bat ' mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=7853facbc9ca77bca43cfe244cb567a56d587501 '
             }
         }
     }
