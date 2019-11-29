@@ -8,20 +8,20 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo 'Etape Helloi, Build Maven'
+                echo 'Etape Hello, Build Maven'
                 bat 'mvn clean compile'
             }
         }
         stage('Test') { 
             steps {
-                // 
-                echo 'Etape Test'
+                echo 'Etape Hello, Test Maven'
+                bat 'mvn clean test'
             }
         }
         stage('Packaging') { 
             steps {
-                // 
-                echo 'Etape Packaging'
+                echo 'Etape Hello, Panckaging Maven'
+                bat 'mvn clean package'
             }
         }
         stage('Deploy') { 
